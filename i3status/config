@@ -1,0 +1,33 @@
+general {
+        output_format = "i3bar"
+        colors = false
+        markup = pango
+        interval = 5
+        color_good = '#2f343f'
+		color_degraded = '#ebcb8b'
+		color_bad = '#ba5e57'
+}
+
+order += "load"
+order += "disk /"
+order += "disk /home"
+order += "volume master"
+order += "tztime utc"
+
+load {
+        format = "<span background='#f59335'>  %5min Load </span>"
+}
+
+volume master {
+        format = "<span background='#d6463c'>  %volume </span>"
+        format_muted = "<span background='#ebcb8b'>  Muted </span>"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+tztime utc {
+        format = "%I:%M:%S"
+        timezone = "Europe/Stockholm"
+}
+
