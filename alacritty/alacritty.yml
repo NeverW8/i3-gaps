@@ -1,4 +1,8 @@
 ---
+env:
+  TERM: xterm-256color
+
+enable_rgb: true
 import:
   - /home/ghost/.config/alacritty/dracula.yml
 
